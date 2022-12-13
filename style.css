@@ -1,0 +1,71 @@
+* {
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: #000000 ;
+}
+
+p {
+    color: aliceblue;
+}
+
+h1 {
+    color: #7B2CBF;
+}
+
+
+ul {
+    padding: 0;
+}
+
+
+li {
+    cursor: pointer;
+    background-color: gold;
+    text-align: center;
+    width: 300px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin: 5px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    overflow-y: auto; 
+    text-justify: distribute-all-lines;
+} 
+
+#userinput {
+        border: none;
+        width: 200px;
+        font-size: large;
+        padding: 5px;
+        border-radius: 5px;
+}
+
+.add-button {
+    border: none;
+    background-color: gold;
+    font-size: large;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.delete-button {
+    background-color: #000;
+    color: #D90429;
+    border: none;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 25%;
+}
+
+.delete-button:hover {
+    background-color: #333;
+    cursor: pointer;
+}
