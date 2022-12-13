@@ -8,10 +8,12 @@ body {
 
 p {
     color: aliceblue;
+    margin: 10px 5px;
 }
 
 h1 {
     color: #7B2CBF;
+    margin: 20px 5px;
 }
 
 
@@ -21,13 +23,15 @@ ul {
 
 
 li {
+    font-size: large;
+    font-family: 'Roboto', sans-serif;
     cursor: pointer;
     background-color: gold;
     text-align: center;
     width: 300px;
-    padding: 5px 15px;
+    padding: 10px 20px;
     border-radius: 10px;
-    margin: 5px;
+    margin: 10px 5px;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -42,6 +46,7 @@ li {
         font-size: large;
         padding: 5px;
         border-radius: 5px;
+        margin: 10px 5px;
 }
 
 .add-button {
@@ -57,15 +62,17 @@ li {
 }
 
 .delete-button {
-    background-color: #000;
+    background-color: #333;
     color: #D90429;
     border: none;
     margin: 5px;
-    padding: 5px 10px;
-    border-radius: 25%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: fixed;
+    left: 35%;
 }
 
 .delete-button:hover {
-    background-color: #333;
+    background-color: #222;
     cursor: pointer;
 }
