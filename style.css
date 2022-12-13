@@ -1,9 +1,16 @@
+:root {
+    --list-width: 300px;
+    --delete-button-position: 350px;
+}
+
 * {
-    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: #000000 ;
+    font-family: Roboto, sans-serif;
 }
 
 p {
@@ -12,9 +19,23 @@ p {
 }
 
 h1 {
-    color: #7B2CBF;
     margin: 20px 5px;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    width: fit-content;
+    background-color: #21D4FD; /*fallback color*/
+    background-image: linear-gradient(20deg, #21D4FD, #B721FF); /* gradient that we want */
+    background-size: 100%;  /* Set the background size and repeat properties. */
+    background-repeat: repeat;
+    /* Set text as transparent, so that the background shows through. */
+    /*and set the background clip to text, which will only render the background where text is*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
+
+
+
 
 
 ul {
@@ -28,7 +49,7 @@ li {
     cursor: pointer;
     background-color: gold;
     text-align: center;
-    width: 300px;
+    width: var(--list-width);
     padding: 10px 20px;
     border-radius: 10px;
     margin: 10px 5px;
@@ -44,17 +65,19 @@ li {
         border: none;
         width: 200px;
         font-size: large;
-        padding: 5px;
-        border-radius: 5px;
+        padding: 10px;
+        border-radius: 10px;
         margin: 10px 5px;
 }
 
 .add-button {
     border: none;
     background-color: gold;
+    color: #000;
     font-size: large;
-    padding: 5px 20px;
-    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
 .done {
@@ -69,7 +92,8 @@ li {
     padding: 10px 20px;
     border-radius: 10px;
     position: fixed;
-    left: 35%;
+    left: var(--delete-button-position);
+    font-size: large;
 }
 
 .delete-button:hover {
