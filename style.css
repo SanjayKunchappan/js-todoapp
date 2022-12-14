@@ -85,6 +85,9 @@ li {
 
 .done {
     text-decoration: line-through;
+    background-color: gray;
+    background-image: linear-gradient(90deg,#727a9a, #bdc3c7); 
+
 }
 
 .delete-button {
