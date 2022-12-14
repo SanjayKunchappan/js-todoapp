@@ -1,6 +1,7 @@
 :root {
     --list-width: 300px;
     --delete-button-position: 350px;
+    --delete-button-position-mob: 82vw;
 }
 
 * {
@@ -18,12 +19,12 @@ p {
     margin: 10px 5px;
 }
 
-h1 {
+.heading {
     margin: 20px 5px;
     font-family: 'Inter', 'Roboto', sans-serif;
     width: fit-content;
-    background-color: #21D4FD; /*fallback color*/
-    background-image: linear-gradient(20deg, #21D4FD, #B721FF); /* gradient that we want */
+    background-color: #FF0000; /*fallback color*/
+    background-image: linear-gradient(60deg,#2278fb, #a106f4, #f2c2ee); /* gradient that we want */
     background-size: 100%;  /* Set the background size and repeat properties. */
     background-repeat: repeat;
     /* Set text as transparent, so that the background shows through. */
@@ -33,8 +34,6 @@ h1 {
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 }
-
-
 
 
 
@@ -48,6 +47,7 @@ li {
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
     background-color: gold;
+    background-image: linear-gradient(90deg,#ffb347, #ffcc33); 
     text-align: center;
     width: var(--list-width);
     padding: 10px 20px;
@@ -73,11 +73,14 @@ li {
 .add-button {
     border: none;
     background-color: gold;
+    background-image: linear-gradient(90deg,#ffb347, #ffcc33); 
     color: #000;
     font-size: large;
     font-family: 'Roboto', sans-serif;
     padding: 10px 20px;
     border-radius: 10px;
+    height: fit-content;
+    width: fit-content;
 }
 
 .done {
@@ -86,17 +89,59 @@ li {
 
 .delete-button {
     background-color: #333;
+    background-image: linear-gradient(90deg,#232526, #414345); 
     color: #D90429;
     border: none;
     margin: 5px;
     padding: 10px 20px;
     border-radius: 10px;
-    position: fixed;
+    position: absolute;
     left: var(--delete-button-position);
     font-size: large;
 }
 
 .delete-button:hover {
     background-color: #222;
+    background-image: linear-gradient(90deg,#333, #111);
     cursor: pointer;
+}
+
+
+@media only screen and (max-width: 480px) {
+    body {
+    display: flex;
+    flex-direction: column;
+    }
+
+    p {
+        font-size: 13px;
+        padding: 0 5px;
+    }
+
+    h1 {
+
+        text-align: center;
+        align-self: center;
+    }
+
+    li {
+        display: flex;
+        flex-direction: row;
+        width: 70vw;
+    }
+
+    .add-elements-section{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 5px;
+    }
+
+    .delete-button {
+        left: var(--delete-button-position-mob);
+        text-align: center;
+    }
+
+
+
 }

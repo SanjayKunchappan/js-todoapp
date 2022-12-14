@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>&#128221; Sanjay's To-do App</title>
     <link rel = "icon" href = "images/logo.png" type = "image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Sanjay's To-do App &#128466;	</h1>
+    <h1 class="heading">Sanjay's To-do App &#128466;	</h1>
     <p id="rules">&#9989; Type in your task.</p>
     <p id="rules">&#9989; You can add the task using the Add Button or the Enter key.</p>
     <p id="rules">&#9989; You can click on each task to mark it as done.</p>
     <p id="rules">&#9989; Click on the &#10060; icon to delete a task.</p>
-    <input id="userinput" type="text" placeholder="Enter items">
-    <button id="enter" class="add-button">Add</button>
+    <div class="add-elements-section">
+        <input id="userinput" type="text" placeholder="Enter items">
+        <button id="enter" class="add-button">Add</button>    
+    </div>
     <ul>
     </ul>
     <script src="script.js"></script>
