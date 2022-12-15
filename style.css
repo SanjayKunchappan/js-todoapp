@@ -47,7 +47,7 @@ li {
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
     background-color: gold;
-    background-image: linear-gradient(90deg,#ffb347, #ffcc33); 
+    background-image: linear-gradient(60deg,#ffb347, #ffcc33); 
     text-align: center;
     width: var(--list-width);
     padding: 10px 20px;
@@ -61,6 +61,8 @@ li {
     text-justify: distribute-all-lines;
 } 
 
+
+
 #userinput {
         border: none;
         width: 200px;
@@ -73,7 +75,7 @@ li {
 .add-button {
     border: none;
     background-color: gold;
-    background-image: linear-gradient(90deg,#ffb347, #ffcc33); 
+    background-image: linear-gradient(60deg,#ffb347, #ffcc33); 
     color: #000;
     font-size: large;
     font-family: 'Roboto', sans-serif;
@@ -83,16 +85,20 @@ li {
     width: fit-content;
 }
 
+.add-button:hover {
+    background-image: linear-gradient(45deg, #ffcc33, #ffb347); 
+}
+
 .done {
     text-decoration: line-through;
     background-color: gray;
-    background-image: linear-gradient(90deg,#727a9a, #bdc3c7); 
+    background-image: linear-gradient(60deg,#727a9a, #bdc3c7); 
 
 }
 
 .delete-button {
     background-color: #333;
-    background-image: linear-gradient(90deg,#232526, #414345); 
+    background-image: linear-gradient(60deg,#232526, #414345); 
     color: #D90429;
     border: none;
     margin: 5px;
@@ -105,7 +111,7 @@ li {
 
 .delete-button:hover {
     background-color: #222;
-    background-image: linear-gradient(90deg,#333, #111);
+    background-image: linear-gradient(45deg,#333, #111);
     cursor: pointer;
 }
 
