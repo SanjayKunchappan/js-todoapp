@@ -5,14 +5,18 @@ var input = document.querySelector("#userinput");
 var ul = document.querySelector("ul");
 var listItems = document.querySelectorAll("li");
 
+
+//update all the <li> elements
+//we will call this every time a new element is added.
 function updatelistItems() {
   listItems = document.querySelectorAll("li");
   return listItems;
 }
 
+
 //element.classList.toggle can be used to alternatively add/remove class
 function toggleStrikeThrough() {
-  this.classList.toggle("done"); //this
+  this.classList.toggle("done"); //this here returns the element that is clicked
 }
 
 function inputLength() {
@@ -28,12 +32,12 @@ function createListElement() {
   //add delete button for every newly created list element
   var deleteButton = document.createElement("button");
   li.appendChild(deleteButton);
-  deleteButton.appendChild(document.createTextNode("\u274C"));
+  deleteButton.appendChild(document.createTextNode("\u274C"));//cross emoji appended
   deleteButton.classList.add("delete-button");
 }
 
 function inputCriteria() {
-  if (input.value.trim().length != 0) {
+  if (input.value.trim().length != 0) {//checks if there is nothing in the array other than space
     return true;
   }
   return false;
@@ -43,25 +47,22 @@ function addListAfterClick() {
   if (inputCriteria() === true) {
     createListElement();
     updatelistItems();
-    console.log(listItems);
     clickListenerForToggle();
     clickListenerForDeleteButton();
   }
 }
 
 function addListAfterEnter(Event) {
-  if (inputCriteria() === true && Event.keyCode === 13) {
-    // keyCode 13 is for Enter
+  if (inputCriteria() === true && Event.keyCode === 13) {// keyCode 13 is for Enter
     createListElement();
     updatelistItems();
-    console.log(listItems);
     clickListenerForToggle();
     clickListenerForDeleteButton();
   }
 }
 
 function deleteListItem() {
-  var currentListElement = this.parentNode; //this returns the delete button
+  var currentListElement = this.parentNode; //this keyword here returns the delete button
   currentListElement.parentNode.removeChild(currentListElement); //deleting currentListElement
 }
 
