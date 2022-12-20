@@ -19,9 +19,7 @@ function toggleStrikeThrough() {
   this.classList.toggle("done"); //this here returns the element that is clicked
 }
 
-function inputLength() {
-  return input.value.length; //returns how many characters are entered in input text field
-}
+
 
 function createListElement() {
   var li = document.createElement("li"); //create element
@@ -68,7 +66,7 @@ function deleteListItem() {
 
 function clickListenerForDeleteButton() {
   //listItems is an array of all the <li> elements
-  listItems.forEach(function (element, i) {
+  listItems.forEach(function (element) {
     //here element is the <li> element
     element.children[0].addEventListener("click", deleteListItem);
   }); //element.children[0] is the Delete button placed inside that list element
@@ -77,7 +75,7 @@ function clickListenerForDeleteButton() {
 function clickListenerForToggle() {
   //listItems is an array of all the li elements
   //adding listener for each array element
-  listItems.forEach(function (element, i) {
+  listItems.forEach(function (element) {
     element.addEventListener("click", toggleStrikeThrough);
   });
 }
